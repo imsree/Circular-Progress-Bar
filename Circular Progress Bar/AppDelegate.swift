@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Circular Progress Bar
 //
-//  Created by Sree .... on 21/07/19.
+//  Created by Sree .... on 20/07/19.
 //  Copyright © 2019 Sree . All rights reserved.
 //
 
@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .white
+        window?.makeKeyAndVisible()
+        let vc = ViewController()
+        let navigationController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navigationController
         return true
     }
 
